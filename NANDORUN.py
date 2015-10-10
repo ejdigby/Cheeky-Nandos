@@ -13,6 +13,28 @@ def quiz():
 
 @app.route("/quiz", methods="POST")
 def quizanswers():
+	answers = []
+	totalscore = 0
+	for i in range(1, 12):
+		answers.append(request.form["q" + str(i)])
+
+
+	for i in answers:
+		if i == 0 or i == 4 or i == 5:
+			totalscore += i * 20
+		elif i == 1 or i == 2:
+			totalscore += i * 10
+		elif i == 3:
+			totalscore += i * 25
+		elif i == 6 or i==7 of i == 8 or i == 9 or i==10:
+			 if answers[i] == "NO":
+			 	totalscore -= 10
+			 elif answers[i] == "YES":
+			 	totalscore += 100
+			 else:
+			 	print "error"
+
+	print totalscore
 	return ("hello world")
 
 if __name__ == '__main__':
