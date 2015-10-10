@@ -26,7 +26,7 @@ def quizanswers():
 			totalscore += i * 10
 		elif i == 3:
 			totalscore += i * 25
-		elif i == 6 or i==7 of i == 8 or i == 9 or i==10:
+		elif i == 6 or i==7 or i == 8 or i == 9 or i==10:
 			 if answers[i] == "NO":
 			 	totalscore -= 10
 			 elif answers[i] == "YES":
