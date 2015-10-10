@@ -11,7 +11,7 @@ def index():
 def quiz():
 	return render_template("quiz.html")
 
-@app.route("/quiz", methods="POST")
+@app.route("/quiz", methods=["POST"])
 def quizanswers():
 	answers = []
 	totalscore = 0
